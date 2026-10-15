@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 640" width="1640" height="640" font-family="system-ui, Segoe UI, Arial, sans-serif">
+<rect width="1640" height="640" fill="#eef1f5"/>
+<text x="60" y="62" font-size="28" font-weight="800" fill="#0b1220">User flow · Guners</text>
+<text x="60" y="94" font-size="16" fill="#444c5c">Tâche : trouver les stats de la saison 2011-12 et la garder en favori (6 étapes)</text>
+<rect x="1220" y="40" width="360" height="50" rx="8" fill="#0b1220"/><text x="1240" y="72" font-size="15" font-weight="700" fill="#75aadb">Persona : Luca (16 ans, Bussigny)</text>
+<g transform="translate(60,140)"><rect width="230" height="430" rx="10" fill="#fff" stroke="#0b1220" stroke-width="2"/>
+<circle cx="38" cy="42" r="20" fill="#75aadb"/><text x="38" y="49" text-anchor="middle" font-size="20" font-weight="800" fill="#0b1220">1</text>
+<text x="70" y="38" font-size="12" font-weight="700" letter-spacing="1" fill="#444c5c">ÉCRAN ACCUEIL</text><text x="70" y="60" font-size="19" font-weight="800" fill="#0b1220">Arrivée</text>
+<text x="20" y="104" font-size="13" font-weight="700" fill="#444c5c">ACTION</text>
+<text x="20" y="130" font-size="15" fill="#0b1220">Luca ouvre Guners pendant</text>
+<text x="20" y="152" font-size="15" fill="#0b1220">une discussion foot.</text>
+<rect x="16" y="320" width="198" height="90" rx="8" fill="#e9f6ee" stroke="#116b3a"/><text x="28" y="344" font-size="12" font-weight="700" fill="#116b3a">L'ÉCRAN RÉPOND</text>
+<text x="28" y="368" font-size="14" font-weight="600" fill="#0b1220">Voit le total de buts et</text>
+<text x="28" y="388" font-size="14" font-weight="600" fill="#0b1220">les cartes</text>
+</g>
+<line x1="294" y1="355" x2="314" y2="355" stroke="#0b1220" stroke-width="3"/><polygon points="314,348 323,355 314,362" fill="#0b1220"/>
+<g transform="translate(322,140)"><rect width="230" height="430" rx="10" fill="#fff" stroke="#0b1220" stroke-width="2"/>
+<circle cx="38" cy="42" r="20" fill="#75aadb"/><text x="38" y="49" text-anchor="middle" font-size="20" font-weight="800" fill="#0b1220">2</text>
+<text x="70" y="38" font-size="12" font-weight="700" letter-spacing="1" fill="#444c5c">ÉCRAN LISTE</text><text x="70" y="60" font-size="19" font-weight="800" fill="#0b1220">Filtrer</text>
+<text x="20" y="104" font-size="13" font-weight="700" fill="#444c5c">ACTION</text>
+<text x="20" y="130" font-size="15" fill="#0b1220">Il tape sur la puce «</text>
+<text x="20" y="152" font-size="15" fill="#0b1220">Barça ».</text>
+<rect x="16" y="320" width="198" height="90" rx="8" fill="#e9f6ee" stroke="#116b3a"/><text x="28" y="344" font-size="12" font-weight="700" fill="#116b3a">L'ÉCRAN RÉPOND</text>
+<text x="28" y="368" font-size="14" font-weight="600" fill="#0b1220">« 6 fiches · filtre :</text>
+<text x="28" y="388" font-size="14" font-weight="600" fill="#0b1220">Barça »</text>
+</g>
+<line x1="556" y1="355" x2="576" y2="355" stroke="#0b1220" stroke-width="3"/><polygon points="576,348 585,355 576,362" fill="#0b1220"/>
+<g transform="translate(584,140)"><rect width="230" height="430" rx="10" fill="#fff" stroke="#0b1220" stroke-width="2"/>
+<circle cx="38" cy="42" r="20" fill="#75aadb"/><text x="38" y="49" text-anchor="middle" font-size="20" font-weight="800" fill="#0b1220">3</text>
+<text x="70" y="38" font-size="12" font-weight="700" letter-spacing="1" fill="#444c5c">ÉCRAN LISTE</text><text x="70" y="60" font-size="19" font-weight="800" fill="#0b1220">Choisir</text>
+<text x="20" y="104" font-size="13" font-weight="700" fill="#444c5c">ACTION</text>
+<text x="20" y="130" font-size="15" fill="#0b1220">Il repère « 2011-12 · 73</text>
+<text x="20" y="152" font-size="15" fill="#0b1220">buts » et tape « Voir la</text>
+<text x="20" y="174" font-size="15" fill="#0b1220">fiche ».</text>
+<rect x="16" y="320" width="198" height="90" rx="8" fill="#e9f6ee" stroke="#116b3a"/><text x="28" y="344" font-size="12" font-weight="700" fill="#116b3a">L'ÉCRAN RÉPOND</text>
+<text x="28" y="368" font-size="14" font-weight="600" fill="#0b1220">La fiche s'ouvre</text>
+</g>
+<line x1="818" y1="355" x2="838" y2="355" stroke="#0b1220" stroke-width="3"/><polygon points="838,348 847,355 838,362" fill="#0b1220"/>
+<g transform="translate(846,140)"><rect width="230" height="430" rx="10" fill="#fff" stroke="#0b1220" stroke-width="2"/>
+<circle cx="38" cy="42" r="20" fill="#75aadb"/><text x="38" y="49" text-anchor="middle" font-size="20" font-weight="800" fill="#0b1220">4</text>
+<text x="70" y="38" font-size="12" font-weight="700" letter-spacing="1" fill="#444c5c">ÉCRAN FICHE</text><text x="70" y="60" font-size="19" font-weight="800" fill="#0b1220">Consulter</text>
+<text x="20" y="104" font-size="13" font-weight="700" fill="#444c5c">ACTION</text>
+<text x="20" y="130" font-size="15" fill="#0b1220">Il lit matchs, passes,</text>
+<text x="20" y="152" font-size="15" fill="#0b1220">trophées et montre</text>
+<text x="20" y="174" font-size="15" fill="#0b1220">l'écran.</text>
+<rect x="16" y="320" width="198" height="90" rx="8" fill="#e9f6ee" stroke="#116b3a"/><text x="28" y="344" font-size="12" font-weight="700" fill="#116b3a">L'ÉCRAN RÉPOND</text>
+<text x="28" y="368" font-size="14" font-weight="600" fill="#0b1220">Chiffre « 73 » en très</text>
+<text x="28" y="388" font-size="14" font-weight="600" fill="#0b1220">grand</text>
+</g>
+<line x1="1080" y1="355" x2="1100" y2="355" stroke="#0b1220" stroke-width="3"/><polygon points="1100,348 1109,355 1100,362" fill="#0b1220"/>
+<g transform="translate(1108,140)"><rect width="230" height="430" rx="10" fill="#fff" stroke="#0b1220" stroke-width="2"/>
+<circle cx="38" cy="42" r="20" fill="#75aadb"/><text x="38" y="49" text-anchor="middle" font-size="20" font-weight="800" fill="#0b1220">5</text>
+<text x="70" y="38" font-size="12" font-weight="700" letter-spacing="1" fill="#444c5c">ÉCRAN FICHE</text><text x="70" y="60" font-size="19" font-weight="800" fill="#0b1220">Agir</text>
+<text x="20" y="104" font-size="13" font-weight="700" fill="#444c5c">ACTION</text>
+<text x="20" y="130" font-size="15" fill="#0b1220">Il tape « ☆ Ajouter aux</text>
+<text x="20" y="152" font-size="15" fill="#0b1220">favoris ».</text>
+<rect x="16" y="320" width="198" height="90" rx="8" fill="#e9f6ee" stroke="#116b3a"/><text x="28" y="344" font-size="12" font-weight="700" fill="#116b3a">L'ÉCRAN RÉPOND</text>
+<text x="28" y="368" font-size="14" font-weight="600" fill="#0b1220">« ★ Dans mes favoris » +</text>
+<text x="28" y="388" font-size="14" font-weight="600" fill="#0b1220">message</text>
+</g>
+<line x1="1342" y1="355" x2="1362" y2="355" stroke="#0b1220" stroke-width="3"/><polygon points="1362,348 1371,355 1362,362" fill="#0b1220"/>
+<g transform="translate(1370,140)"><rect width="230" height="430" rx="10" fill="#fff" stroke="#0b1220" stroke-width="2"/>
+<circle cx="38" cy="42" r="20" fill="#75aadb"/><text x="38" y="49" text-anchor="middle" font-size="20" font-weight="800" fill="#0b1220">6</text>
+<text x="70" y="38" font-size="12" font-weight="700" letter-spacing="1" fill="#444c5c">ÉCRAN LISTE</text><text x="70" y="60" font-size="19" font-weight="800" fill="#0b1220">Revenir</text>
+<text x="20" y="104" font-size="13" font-weight="700" fill="#444c5c">ACTION</text>
+<text x="20" y="130" font-size="15" fill="#0b1220">Il tape « ← Retour à la</text>
+<text x="20" y="152" font-size="15" fill="#0b1220">liste ».</text>
+<rect x="16" y="320" width="198" height="90" rx="8" fill="#e9f6ee" stroke="#116b3a"/><text x="28" y="344" font-size="12" font-weight="700" fill="#116b3a">L'ÉCRAN RÉPOND</text>
+<text x="28" y="368" font-size="14" font-weight="600" fill="#0b1220">Filtre Barça toujours</text>
+<text x="28" y="388" font-size="14" font-weight="600" fill="#0b1220">actif</text>
+</g>
+<text x="60" y="610" font-size="14" fill="#444c5c">Variante d'échec : recherche « Chelsea » → « Aucune fiche… Essaie Barça, PSG, Inter Miami ou Argentine. » + bouton « Effacer la recherche »</text></svg>
