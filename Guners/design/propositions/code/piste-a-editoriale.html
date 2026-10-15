@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guners — Piste A · Éditoriale & sobre</title>
+  <style>
+    /* Piste A · Éditoriale & sobre — seules les variables et quelques règles de style changent entre les pistes. */
+    :root {
+      --fond: #faf7f2; --surface: #ffffff; --texte: #1b2333; --texte-doux: #4f5663;
+      --bordure: #8a8f99; --action: #14213d; --action-survol: #26365c; --action-texte: #ffffff;
+      --puce-active: #14213d; --puce-active-texte: #ffffff; --chiffre: #14213d;
+      --focus: #9a6a00; --succes: #1e6b3a;
+      --police-titre: Georgia, "Times New Roman", serif; --police-texte: Georgia, "Times New Roman", serif;
+    }
+    .entete { padding-top: 28px; padding-bottom: 18px; border-bottom: 1px solid #d9d4ca; }
+    .logo { font-size: 2.4rem; font-style: italic; letter-spacing: -.01em; }
+    .accroche { font-size: 1.05rem; color: var(--texte-doux); }
+    .total strong { font-size: 1.4rem; }
+    .carte, .fiche { border-top: 3px solid var(--action); border-left: 1px solid #e5e3de; border-right: 1px solid #e5e3de; border-bottom: 1px solid #e5e3de; }
+    .puce, .recherche, .bouton-principal, .bouton-secondaire, .bouton-retour { border-radius: 2px; }
+    .puce { border-width: 1px; font-weight: 400; }
+
+    /* --- Structure commune aux 3 pistes --- */
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--fond); color: var(--texte); font-family: var(--police-texte); line-height: 1.5; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .lien-evitement { position: absolute; left: 8px; top: -60px; padding: 12px 16px; background: var(--action); color: var(--action-texte); z-index: 10; }
+    .lien-evitement:focus { top: 8px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .entete, main, .pied { max-width: 680px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+    .logo { margin: 0; font-family: var(--police-titre); }
+    .accroche { margin: 4px 0 0; }
+    .total { margin: 12px 0 0; }
+    .total strong { font-family: var(--police-titre); }
+    .label-recherche { display: block; font-weight: 700; margin: 20px 0 6px; }
+    .recherche { width: 100%; min-height: 48px; padding: 10px 14px; font: inherit; color: var(--texte); background: var(--surface); border: 2px solid var(--bordure); }
+    .puces { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 8px; }
+    .puce { min-height: 48px; padding: 0 16px; font: inherit; font-weight: 600; cursor: pointer; color: var(--texte); background: var(--surface); border: 2px solid var(--bordure); }
+    .puce[aria-pressed="true"] { background: var(--puce-active); color: var(--puce-active-texte); border-color: var(--puce-active); }
+    .statut { margin: 6px 0 12px; color: var(--texte-doux); }
+    .liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .carte, .fiche { background: var(--surface); padding: 18px; }
+    .carte-club { margin: 0; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--texte-doux); }
+    .carte-saison { margin: 2px 0 6px; font-family: var(--police-titre); font-size: 1.35rem; }
+    .carte-chiffre { margin: 0; }
+    .carte-chiffre strong, .fiche-chiffre strong { font-family: var(--police-titre); font-size: 2.6rem; line-height: 1; margin-right: 4px; color: var(--chiffre); }
+    .carte-detail { margin: 6px 0 14px; color: var(--texte-doux); }
+    .badge-fav { margin-left: 6px; padding: 2px 8px; font-size: .75rem; background: var(--puce-active); color: var(--puce-active-texte); }
+    .bouton-principal, .bouton-secondaire, .bouton-retour { min-height: 48px; padding: 0 20px; font: inherit; font-weight: 700; cursor: pointer; }
+    .bouton-principal { width: 100%; background: var(--action); color: var(--action-texte); border: 2px solid var(--action); }
+    .bouton-principal:hover { background: var(--action-survol); border-color: var(--action-survol); }
+    .bouton-secondaire, .bouton-retour { background: transparent; color: var(--texte); border: 2px solid var(--bordure); }
+    .bouton-retour { margin: 16px 0 14px; }
+    .vide { padding: 18px; background: var(--surface); }
+    .fiche-titre { margin: 2px 0 10px; font-family: var(--police-titre); font-size: 1.7rem; }
+    .fiche-chiffre { margin: 0 0 16px; }
+    .fiche-chiffre strong { font-size: 4rem; }
+    .fiche-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 18px; }
+    .fiche-stats div { padding: 10px; background: var(--fond); }
+    .fiche-stats dt { font-size: .8rem; color: var(--texte-doux); }
+    .fiche-stats dd { margin: 0; font-family: var(--police-titre); font-size: 1.5rem; font-weight: 700; }
+    .fiche h3 { margin: 0 0 6px; font-family: var(--police-titre); font-size: 1.05rem; }
+    .trophees { margin: 0 0 16px; padding-left: 0; list-style: none; }
+    .anecdote { margin: 0 0 20px; }
+    .confirmation { min-height: 1.5em; margin: 10px 0 0; font-weight: 700; color: var(--succes); }
+    .mention { margin: 12px 0 0; font-size: .8rem; color: var(--texte-doux); }
+    .pied { padding-top: 28px; padding-bottom: 28px; font-size: .85rem; color: var(--texte-doux); }
+    @media (min-width: 700px) { .liste { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <p class="logo">Guners</p>
+    <p class="accroche">Toutes les stats de Lionel Messi</p>
+    <p class="total"><strong id="total-buts">0</strong> buts sur ces fiches</p>
+  </header>
+
+  <main id="contenu">
+    <section id="vue-liste" aria-label="Liste des fiches">
+      <label class="label-recherche" for="recherche">Chercher une saison, un club, un trophée</label>
+      <input id="recherche" class="recherche" type="search" placeholder="ex. 2012, PSG, Coupe du monde" autocomplete="off">
+      <div id="puces" class="puces" role="group" aria-label="Filtrer par club"></div>
+      <p id="statut" class="statut" aria-live="polite"></p>
+      <ul id="liste" class="liste"></ul>
+    </section>
+    <section id="vue-fiche" aria-label="Fiche détaillée" hidden></section>
+  </main>
+
+  <footer class="pied">
+    <p>Guners · projet M291 de Joshua · données de démo inventées</p>
+  </footer>
+  <script src="guners.js"></script>
+</body>
+</html>
