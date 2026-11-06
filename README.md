@@ -10,6 +10,7 @@ faire un site modeliser en 3d
 
 Une page vitrine avec toutes les statistiques de Lionel Messi, pour les fans de foot (10 à 40 ans).
 
+- **Site final : [Guners/site/](Guners/site/index.html)** (en ligne : https://joshua-creation.github.io/m291-josh/Guners/site/)
 - Maquette cliquable retenue : [piste C](Guners/design/propositions/code/piste-c-moderne.html)
 - Brief : [Guners/brief.md](Guners/brief.md)
 
@@ -30,3 +31,4 @@ Une page vitrine avec toutes les statistiques de Lionel Messi, pour les fans de 
 | s7 | e2-5 · Trois designs | [Guners/design/propositions/](Guners/design/propositions) |
 | s7 | e2-6 · Critique des designs | [Guners/design/critique.md](Guners/design/critique.md) |
 | s8 | e2-7 · Tests utilisateurs & accessibilité | [tests-utilisateurs.md](Guners/design/tests-utilisateurs.md), [observation.md](Guners/design/observation.md) |
+| s9 | Site final Guners | [Guners/site/](Guners/site) (`index.html`, `style.css`, `script.js`) |

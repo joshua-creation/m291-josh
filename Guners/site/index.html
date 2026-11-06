@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guners · Toutes les stats de Lionel Messi</title>
+  <meta name="description" content="Guners rassemble les statistiques de Lionel Messi saison par saison : buts, matchs, passes décisives et trophées. Filtre par club, garde tes saisons en favoris.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b1220'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='900' font-size='40' text-anchor='middle' fill='%2375aadb'%3EG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <header class="entete">
+    <div class="entete-interne">
+      <p class="logo"><a href="#/">Guners</a></p>
+      <h1 class="accroche">Toutes les stats de Lionel Messi</h1>
+      <div class="tableau">
+        <p class="tableau-ligne">
+          <strong id="total-buts" class="tableau-chiffre">0</strong>
+          <span class="tableau-legende">buts sur ces <span id="total-fiches">0</span> fiches</span>
+        </p>
+        <ul class="tableau-mini" aria-label="Autres totaux">
+          <li><strong id="total-matchs">0</strong> matchs</li>
+          <li><strong id="total-passes">0</strong> passes déc.</li>
+          <li><strong id="total-trophees">0</strong> trophées</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section id="vue-liste" aria-labelledby="titre-liste">
+      <h2 id="titre-liste" class="sr-only">Les fiches saison par saison</h2>
+
+      <label class="label-recherche" for="recherche">Chercher une saison, un club, un trophée</label>
+      <div class="recherche-boite">
+        <input id="recherche" class="recherche" type="search" placeholder="ex. 2012, PSG, Coupe du monde" autocomplete="off" enterkeyhint="search">
+      </div>
+
+      <div id="puces" class="puces" role="group" aria-label="Filtrer par club"></div>
+
+      <p id="statut" class="statut" aria-live="polite"></p>
+      <ul id="liste" class="liste"></ul>
+    </section>
+
+    <section id="vue-fiche" aria-label="Fiche détaillée" hidden></section>
+  </main>
+
+  <footer class="pied">
+    <p>Guners · projet M291 de Joshua, médiamaticien 3e année.</p>
+    <p>Données de démo, proches des vraies mais inventées pour le projet : ne pas citer comme source.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

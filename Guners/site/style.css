@@ -1,0 +1,206 @@
+/* Guners · site final
+   Piste C « Moderne & pragmatique » retenue dans design/critique.md,
+   avec les correctifs : boutons en casse normale, liste triée du plus récent au plus ancien.
+   Mobile First : largeur de référence 390 px. */
+
+:root {
+  --fond: #eef1f5;
+  --surface: #ffffff;
+  --surface-douce: #f6f8fb;
+  --texte: #0b1220;
+  --texte-doux: #444c5c;
+  --nuit: #0b1220;
+  --nuit-texte: #d5dbe5;
+  --action: #75aadb;          /* bleu ciel argentin, toujours avec du texte foncé dessus */
+  --action-survol: #5b95cc;
+  --action-texte: #0b1220;
+  --focus: #a50044;           /* grenat */
+  --succes: #116b3a;
+  --ombre: 6px 6px 0 var(--nuit);
+  --police: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --cible: 48px;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--police);
+  line-height: 1.5;
+}
+h1, h2, h3 { line-height: 1.15; }
+a { color: inherit; }
+button { font: inherit; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.entete :focus-visible { outline-color: var(--action); }
+
+.lien-evitement {
+  position: absolute; left: 8px; top: -80px; z-index: 10;
+  padding: 12px 16px; font-weight: 700; text-decoration: none;
+  background: var(--action); color: var(--action-texte);
+}
+.lien-evitement:focus { top: 8px; }
+
+main, .pied { max-width: 680px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+
+/* ---------- En-tête : l'écran de stade ---------- */
+.entete { background: var(--nuit); color: #ffffff; }
+.entete-interne { max-width: 680px; margin: 0 auto; padding: 22px 16px 24px; }
+
+.logo { margin: 0; font-size: 2.4rem; font-weight: 900; text-transform: uppercase; letter-spacing: -.02em; line-height: 1; }
+.logo a { text-decoration: none; }
+.logo::after { content: ""; display: block; width: 56px; height: 6px; margin-top: 8px; background: var(--action); }
+
+.accroche { margin: 10px 0 0; font-size: 1.05rem; font-weight: 400; color: var(--nuit-texte); }
+
+.tableau {
+  margin-top: 16px; padding: 14px 16px;
+  border: 2px solid #26324a; background: #0f1a2e;
+}
+.tableau-ligne { margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+.tableau-chiffre {
+  font-size: 3.2rem; font-weight: 900; line-height: 1; color: var(--action);
+  font-variant-numeric: tabular-nums; letter-spacing: -.02em;
+}
+.tableau-legende { color: var(--nuit-texte); }
+.tableau-mini {
+  list-style: none; margin: 12px 0 0; padding: 12px 0 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  border-top: 1px solid #26324a; font-size: .85rem; color: var(--nuit-texte);
+}
+.tableau-mini strong { display: block; font-size: 1.35rem; font-weight: 900; color: #ffffff; font-variant-numeric: tabular-nums; }
+
+/* ---------- Recherche + filtres ---------- */
+.label-recherche { display: block; font-weight: 700; margin: 22px 0 6px; }
+.recherche {
+  width: 100%; min-height: var(--cible); padding: 10px 14px;
+  font: inherit; font-size: 1rem; color: var(--texte);
+  background: var(--surface); border: 2px solid var(--nuit); border-radius: 0;
+}
+.recherche::placeholder { color: #5f6878; }
+
+.puces { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
+.puce {
+  min-height: var(--cible); padding: 0 16px;
+  font-weight: 600; cursor: pointer;
+  color: var(--texte); background: var(--surface); border: 2px solid var(--nuit);
+  transition: transform .12s ease;
+}
+.puce:hover { background: var(--surface-douce); }
+.puce:active { transform: translateY(1px); }
+.puce[aria-pressed="true"] { background: var(--nuit); color: #ffffff; }
+.puce-compte { margin-left: 6px; font-size: .8rem; font-weight: 400; opacity: .8; }
+
+.statut { margin: 8px 0 14px; color: var(--texte-doux); }
+
+/* ---------- Cartes ---------- */
+.liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+
+.carte, .fiche { background: var(--surface); border: 2px solid var(--nuit); box-shadow: var(--ombre); }
+.carte { padding: 18px; display: flex; flex-direction: column; height: 100%; }
+
+.carte-club {
+  margin: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+  font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--texte-doux);
+}
+.pastille { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--nuit); }
+.pastille-barca { background: #a50044; }
+.pastille-psg { background: #1d3f8f; }
+.pastille-miami { background: #f4b6c8; }
+.pastille-arg { background: #75aadb; }
+
+.badge-fav {
+  padding: 2px 8px; font-size: .75rem; letter-spacing: 0; text-transform: none;
+  background: var(--nuit); color: #ffffff;
+}
+.carte-saison { margin: 4px 0 8px; font-size: 1.35rem; font-weight: 900; }
+.carte-chiffre { margin: 0; }
+.carte-chiffre strong, .fiche-chiffre strong {
+  font-size: 2.8rem; font-weight: 900; line-height: 1; margin-right: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.carte-detail { margin: 6px 0 16px; color: var(--texte-doux); }
+.carte .bouton-principal { margin-top: auto; }
+
+/* ---------- Boutons ---------- */
+.bouton-principal, .bouton-secondaire, .bouton-retour {
+  min-height: var(--cible); padding: 0 20px; font-weight: 700; cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.bouton-principal {
+  width: 100%; background: var(--action); color: var(--action-texte); border: 2px solid var(--nuit);
+}
+.bouton-principal:hover { background: var(--action-survol); }
+.bouton-principal:active, .bouton-secondaire:active, .bouton-retour:active { transform: translateY(1px); }
+.bouton-secondaire, .bouton-retour { background: var(--surface); color: var(--texte); border: 2px solid var(--nuit); }
+.bouton-secondaire:hover, .bouton-retour:hover { background: var(--surface-douce); }
+.bouton-retour { margin: 20px 0 16px; }
+
+.bouton-fav[aria-pressed="true"] { background: var(--nuit); color: #ffffff; }
+
+/* ---------- Résultat vide ---------- */
+.vide { padding: 18px; background: var(--surface); border: 2px dashed var(--nuit); }
+.vide p { margin: 0 0 14px; }
+
+/* ---------- Fiche détaillée ---------- */
+.fiche { padding: 20px 18px; }
+.fiche-titre { margin: 4px 0 12px; font-size: 1.8rem; font-weight: 900; }
+.fiche-titre:focus { outline: none; }
+.fiche-titre:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.fiche-chiffre { margin: 0 0 18px; font-size: 1.2rem; }
+.fiche-chiffre strong { font-size: 5rem; letter-spacing: -.03em; }
+
+.fiche-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 20px; }
+.fiche-stats div { padding: 10px; border: 2px solid var(--nuit); background: var(--surface-douce); }
+.fiche-stats dt { font-size: .8rem; color: var(--texte-doux); }
+.fiche-stats dd { margin: 0; font-size: 1.5rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+
+.fiche h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.trophees { margin: 0 0 18px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.trophees li { padding: 6px 10px; border: 2px solid var(--nuit); background: var(--surface-douce); font-weight: 600; }
+.anecdote { margin: 0 0 22px; padding-left: 12px; border-left: 4px solid var(--action); }
+
+.confirmation { min-height: 1.5em; margin: 10px 0 0; font-weight: 700; color: var(--succes); }
+
+.fiche-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0 0; }
+.fiche-nav a {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: 56px; padding: 8px 12px; text-decoration: none;
+  background: var(--surface); border: 2px solid var(--nuit); font-size: .85rem; color: var(--texte-doux);
+}
+.fiche-nav a strong { color: var(--texte); font-size: 1rem; }
+.fiche-nav a:hover { background: var(--surface-douce); }
+.fiche-nav .suivante { text-align: right; grid-column: 2; }
+
+.mention { margin: 16px 0 0; font-size: .8rem; color: var(--texte-doux); }
+
+/* ---------- Pied ---------- */
+.pied { padding-top: 36px; padding-bottom: 36px; font-size: .85rem; color: var(--texte-doux); }
+.pied p { margin: 0 0 4px; }
+
+/* ---------- Écrans plus larges ---------- */
+@media (min-width: 700px) {
+  .liste { grid-template-columns: 1fr 1fr; }
+  .logo { font-size: 3rem; }
+  .tableau-chiffre { font-size: 4rem; }
+}
+
+/* Petite apparition des cartes, coupée si l'utilisateur préfère moins d'animation */
+@media (prefers-reduced-motion: no-preference) {
+  .liste > li { animation: monte .35s ease both; }
+  .fiche { animation: monte .3s ease both; }
+  @keyframes monte { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
